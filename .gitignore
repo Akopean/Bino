@@ -4,3 +4,12 @@
 npm-debug.log
 /dist
 index.psd
+README.md
+package.json
+index.png
+gulpfile.babel.js
+bower.json
+.babelrc
+app/*
+gulp/*
+dist/*
