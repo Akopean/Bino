@@ -1,0 +1,704 @@
+/*============    Настройки    ==========*/
+@import "../scss/settings";
+
+/*============    Framework    ==========*/
+@import "../../bower_components/foundation/scss/foundation";
+//@import ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap
+
+/*============    ШРИФТЫ    ==========*/
+
+@fa-font-path: "../fonts";
+@import "../scss/awesome/font-awesome";
+//@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200)
+
+/*============    HELPER CLASS    ===========*/
+.hidden{
+  visibility: hidden;
+}
+.column+.column:last-child, .column+.columns:last-child, .columns+.column:last-child, .columns+.columns:last-child{
+  float: left;
+}
+.column.nopadding,
+.columns.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.fa{
+   color: $primary-color;
+   font-size: 12px;
+}
+
+.fa-circle {
+  padding: 30px 0 30px 0;
+}
+
+.fa-circle__lines {
+    position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    left: -120px;
+    bottom: 6px;
+    height: 2px;
+    background-color: #FFF;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    left: 40px;
+    bottom: 6px;
+    height: 2px;
+    background-color: #FFF;
+  }
+}
+
+.fa-circle__lines-color-gray{
+  &::after,&::before {
+  background-color: #999;
+  }
+}
+
+.square {
+  position: relative;
+  display: inline-block;
+  min-width: 73px;
+  min-height: 73px;
+  border: 1px solid #E5E5E5;
+}
+
+.header-title{
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+/*============    ШАПКА    ===========*/
+
+.ba-header {
+  position: relative;
+  background: url(../images/header.png) no-repeat 100% 0;
+  background-size: cover;
+  height: 1000px;
+  z-index: 1;
+    &::after {
+      content: "";
+      background-color: #000;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 1000px;
+      position: absolute;
+      z-index: -3;
+  }
+}
+/*============    МЕНЮ TOP    ===========*/
+
+.top-bar {
+  z-index: 5;
+  background: none;
+  margin-top: 43px;
+  & ul li {
+    background: none;
+  }
+}
+
+.top-bar-section ul .active {
+  border-bottom: 1px solid $primary-color;
+}
+
+
+/*============   SECTION PRODUCT  ===========*/
+
+.ba-product {
+  margin-top: 230px;
+}
+
+.ba-product__title {
+  z-index: 3;
+}
+
+.ba-product__title-color {
+  color: #FFF;
+}
+
+.ba-product__title-typogra {
+  color: white;
+  letter-spacing: 5px;
+}
+
+.ba-product__title-text {
+  padding: 0 20% 0 20%;
+}
+
+.ba-product__button {
+  border: 1px solid white;
+  margin: 15px 10px 0 10px;
+  background-color: transparent;
+  ::hover {
+    background-color: $primary-color;
+  }
+}
+
+/*============    SECTION SKILL   ===========*/
+.skill{
+  padding-top: 125px;
+  border-bottom: 1px solid #E6E7EB;
+  padding-bottom: 100px;
+}
+
+.design__header-title,.free-supp__header-title,.code__header-title,
+.creative__header-title,.study__header-title,{
+  margin-top: 30px;
+  font-weight: bold;
+ &::before{
+    content: "";
+    position: absolute;
+    min-width: 30px;
+    left: 45%;
+    top: 20px;
+    min-height: 30px;
+ }
+}
+
+.design__header-title::before{
+  background: url(../images/design.png) 50% 50% no-repeat;
+}
+
+.free-supp__header-title::before{
+  background: url(../images/creative.png) 50% 50% no-repeat;
+}
+
+.code__header-title::before{
+  background: url(../images/free-supp.png) 50% 50% no-repeat;
+}
+
+.creative__header-title::before{
+  background: url(../images/code.png) 50% 50% no-repeat;
+}
+
+.design__header,.free-supp__header,.creative__header,.code__header {
+  position: relative;
+}
+
+.design__header:hover > h5,.free-supp__header:hover > h5,.creative__header:hover > h5,.code__header:hover > h5 {
+  color: $primary-color;
+}
+
+.design__header:hover .square,.free-supp__header:hover .square,.code__header:hover .square,.creative__header:hover .square{
+  border-color: $primary-color;
+  -moz-transform: rotate(45deg); /* Для Firefox */
+  -ms-transform: rotate(45deg); /* Для IE */
+  -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(45deg); /* Для Opera */
+  transform: rotate(45deg);
+  -moz-transition: all 0.5s 0.1s ease-in;
+  -o-transition: all 0.5s 0.1s ease-in;
+  -webkit-transition: all 0.5s 0.1s ease-in;
+ }
+.design__descr,.free-supp__descr,.code__descr,.creative__descr{
+  font-size: 12px;
+  padding: 0 8% 0 8%;
+}
+
+/*============   SECTION ABOUT  ===========*/
+.about{
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.about__title {
+  padding-left: 30px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  border-left: 6px solid $primary-color;
+}
+
+.about__description{
+  line-height: 1.9;
+  letter-spacing: -0.53px;
+}
+
+.about__button-margin{
+  margin-top: 40px;
+}
+
+/*============    SECTION SERVICES    ===========*/
+.services{
+position: relative;
+  min-height: 765px;
+}
+
+.services-content{
+  min-height: 765px;
+  background-color: #202020;
+  text-align: right;
+}
+
+.services-content__title{
+  margin: 110px 5% 50px;
+  color: #FFF;
+  padding-right: 22px;
+  border-right: 6px solid $primary-color;
+}
+
+.services-content__sub-title{
+  position: relative;
+  color: $primary-color;
+  padding-right: 5%;
+  }
+
+  .services-content__sub-title{
+  &::after{
+    content: "";
+    position: absolute;
+    min-width: 73px;
+    min-height: 73px;
+    right: -53px;
+    background-repeat: no-repeat;
+    top: 10px;
+    z-index: 15;
+  }
+}
+
+.services-content__web-icon::after{
+background-image: url(../images/web_design.png);
+}
+
+.services-content__print-icon::after{
+background-image: url(../images/print_design.png);
+}
+
+.services-content__photo-icon::after{
+background-image: url(../images/photo.png);
+}
+
+.services-content__description{
+  padding: 0 5% 3%;
+  line-height: 1.9;
+}
+
+.services__foto{
+  padding: 0;
+  min-height: 765px;
+  background-image: url(../images/services_foto.png);
+  background-size: cover;
+  background-repeat: no-repeat; /* Отменяем повторение фона */
+}
+
+/*============   SECTION PORTFOLIO    ===========*/
+.portfolio{
+  padding-top: 120px;
+}
+
+.portfolio-header,.study-header{
+  text-align: center;
+}
+
+
+.portfolio-header__icon, .study-header__icon{
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.portfolio-menu{
+  display: inline-block;
+  text-align: center;
+}
+
+.portfolio-menu .portfolio-menu_item{
+   font-weight: bold;
+   position: relative;
+   &::after{
+      content: "";
+      position: absolute;
+      left: -2rem;
+      width: 2px;
+      height: 16px;
+      top: 3px;
+      background-color: $jet;
+      z-index: 20;
+      -moz-transform: rotate(15deg); /* Для Firefox */
+      -ms-transform: rotate(15deg); /* Для IE */
+      -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+      -o-transform: rotate(15deg); /* Для Opera */
+      transform: rotate(15deg);
+   }
+}
+
+.portfolio-menu .portfolio-menu_item:first-of-type::after{
+    content: none;
+}
+
+.portfolio-menu .mixitup-control-active{
+  color: $primary-color;
+  &:hover{
+    color: $primary-color;
+  }
+}
+
+.portfolio-menu.sub-nav dd,.portfolio-menu.sub-nav dt{
+  margin-left: 3rem;
+}
+.portfolio__footer{
+  .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.portfolio-footer__element{
+  max-width: 480px;
+  max-height: 480px;
+  position: relative;
+  &:hover{
+    &::before{
+      content: "";
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      background-color: $primary-color;
+      opacity: 0.7;
+    }
+  }
+}
+
+.portfolio-element__info{
+  color: #FFF;
+  position: absolute;
+  left: 40px;
+  top: 80%;
+  &::before{
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+    width: 44px;
+    top: -10px;
+    left: 0;
+    height: 2px;
+  }
+}
+
+.portfolio-element__title{
+  color: #FFF;
+  letter-spacing: 3px;
+}
+
+.portfolio-element__url{
+  font-size: 12px;
+ }
+
+/*============   SECTION Study    ===========*/
+.study{
+  margin-top: 475px;
+  background-color: #F4F5F9;
+}
+
+.study-header{
+  padding-top: 80px;
+}
+
+.study__tabs{
+  display: inline-block;
+  position: absolute;
+  left: 46%;
+  bottom: 20px;
+}
+
+.study__tabs.tabs .tab-title>a, .study__tabs.tabs dd>a{
+  background-color: white;
+  padding: 0 3px 0 3px;
+}
+
+.study__tabs .active .study-tabs__icon-color{
+  color: $primary-color;
+}
+.study-tabs__icon{
+  padding: 5px 0 5px 0;
+}
+
+.study-tabs__icon-color{
+  color: #F4F5F9;
+}
+
+.study__info{
+  min-width: 663px;
+  min-height: 630px;
+  background-color: white;
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  z-index: 20;
+}
+
+.row .row.study__rows{
+  margin: 0;
+}
+.study__columns, .study__rows{
+  min-height: inherit;
+}
+
+.study__columns-right{
+ background-image: url(../images/study_creative.png);
+ background-repeat: no-repeat;
+}
+.study__columns-right,.study__columns-left{
+  min-height: 722px;
+}
+
+.study__rows-shadow{
+  box-shadow: 0px 4px 2px rgba(0,0,0,0.1);
+}
+
+.tabs-content .study__content{
+  padding-top: 70px;
+}
+.study__footer-title{
+  padding: 50px 0 40px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.study__footer-desc{
+  text-indent: 7px; /* Отступ первой строки */
+  text-align: center;
+  padding: 0 50px 50px ;
+}
+
+
+/*============    ПОДВАЛ    ===========*/
+
+
+/*============      АДАПТИВ    ===========*/
+
+// Small screens
+@media only screen {
+}
+
+
+/* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+
+  h1 {
+    font-size: rem-calc(40);
+  }
+
+  .ba-product__title-text {
+    padding: 0 10% 0 10%;
+  }
+
+  .about__title{
+    text-align: center;
+    border-right: 6px solid $primary-color;
+  }
+
+  .about__monitor{
+    text-align: center;
+  }
+  .about__button{
+    display: block;
+    text-align: center;
+  }
+
+    .skill,.about{
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .services-content__description,.services-content__sub-title{
+    text-align: center;
+    padding: 0;
+    padding-bottom: 5%;
+  }
+
+  .services-content__title{
+    padding: 0;
+    text-align: center;
+    border-left: 6px solid $primary-color;
+  }
+
+  .portfolio-footer__element{
+    max-width: initial;
+    max-height: initial;
+  }
+  .portfolio-footer__element img {
+    min-width: 100%;
+  }
+    .study__info {
+    left: 0;
+    min-width: 100%;
+  }
+	  .study__columns-left{
+    min-height: 0px;
+  }
+}
+
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+}
+
+// Small - Medium screens
+@media only screen and (max-width: 64em) {
+.services__blank{
+    position: absolute;
+    left: 48.5%;
+    min-height: 2px;
+    min-width: 25px;
+    top: 93%;
+    border-bottom: 2px solid $primary-color;
+    &::after{
+      content: "";
+      position: absolute;
+      min-width: 25px;
+      min-height: 2px;
+      top: -1px;
+      left: 35px;
+      border-bottom:  1px solid $jet;
+    }
+      &::before{
+      content: "";
+      position: absolute;
+      min-width: 25px;
+      min-height: 2px;
+      top: -1px;
+      left: -35px;
+      border-bottom:  1px solid $jet;
+    }
+  }
+  .portfolio-menu.sub-nav dd, .portfolio-menu.sub-nav dt{
+    margin-left: 1rem;
+  }
+  .portfolio-menu .portfolio-menu_item::after {
+    left: -0.5rem;
+  }
+  .portfolio-element__info{
+    left: 25px;
+    top: 70%;
+  }
+
+  .portfolio-element__title{
+    font-size: 1rem;
+  }
+
+  .study__footer-desc{
+  padding: 0 15px 50px ;
+  }
+  .tabs-content .study__content {
+      padding-top: 60px;
+  }
+}
+
+/* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .top-bar-section li:not(.has-form) a:not(.button) {
+    line-height: inherit;
+    padding: 10px;
+  }
+  h1 {
+    font-size: rem-calc(50);
+  }
+  .services__icon-web,.services__icon-print,.services__icon-photo{
+  left: 93%;
+  }
+}
+
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) {
+  .services-content__description{
+    padding-left: 35%;
+    }
+  .services__blank{
+    position: absolute;
+    left: 50px;
+    min-height: 25px;
+    min-width: 2px;
+    top: 48%;
+    border-left: 2px solid $primary-color;
+    &::after{
+      content: "";
+      position: absolute;
+      min-width: 2px;
+      min-height: 25px;
+      top: 35px;
+      left: -2px;
+      border-left:  1px solid $jet;
+    }
+      &::before{
+      content: "";
+      position: absolute;
+      min-width: 2px;
+      min-height: 25px;
+      top: -35px;
+      left: -2px;
+      border-left:  1px solid $jet;
+    }
+  }
+}
+
+/* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+
+  .services__icon-web,.services__icon-print,.services__icon-photo{
+  left: 94.5%;
+  }
+
+  .services__blank{
+    position: absolute;
+    left: 50px;
+    min-height: 25px;
+    min-width: 2px;
+    top: 48%;
+    border-left: 2px solid $primary-color;
+    &::after{
+      content: "";
+      position: absolute;
+      min-width: 2px;
+      min-height: 25px;
+      top: 35px;
+      left: -2px;
+      border-left:  1px solid $jet;
+    }
+      &::before{
+      content: "";
+      position: absolute;
+      min-width: 2px;
+      min-height: 25px;
+      top: -35px;
+      left: -2px;
+      border-left:  1px solid $jet;
+    }
+  }
+}
+
+
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) {}
+
+
+/* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) {}
+
+
+/* min-width 1921px, xxlarge screens */
