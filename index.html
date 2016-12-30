@@ -16,7 +16,7 @@
         </meta>
     </head>
     <body>
-        <header class="ba-header">
+        <header id="header" class="ba-header">
             <section class="ba-nav row">
                 <div class="columns nopadding small-12">
                     <nav class="top-bar" data-topbar="" role="navigation">
@@ -45,32 +45,32 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#about">
                                         ABOUT US
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#portfolio">
                                         PORTFOLIO
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#pricing">
                                         PRICING
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#team">
                                         TEAM
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#blog">
                                         BLOG
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#contact">
                                         CONTACT
                                     </a>
                                 </li>
@@ -169,16 +169,16 @@
                 </div>
             </section>
             <!-- /skill -->
-            <section class="about">
+            <section id="about" class="about">
                 <div class="row">
                     <div class="columns medium-6 about__monitor">
                         <img alt="Monitor" src="images/Monitor.png">
                         </img>
                     </div>
                     <div class="columns medium-6">
-                        <h3 class="header-title about__title">
+                        <h2 class="header-title about__title">
                             OUR HISTORY
-                        </h3>
+                        </h2>
                         <p class="about__description">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
@@ -196,9 +196,9 @@
                 <div class="columns medium-6 services-content">
                     <span class="services__blank">
                     </span>
-                    <h3 class="header-title services-content__title">
+                    <h2 class="header-title services-content__title">
                         OUR SERVICES
-                    </h3>
+                    </h2>
                     <h4 class="services-content__sub-title services-content__web-icon hide-for-small-only">
                         WEB DESIGN
                     </h4>
@@ -222,12 +222,12 @@
                 </div>
             </section>
             <!-- /services -->
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio">
                 <div class="row">
                     <div class="columns portfolio-header">
-                        <h3 class="header-title portfolio-header__title">
+                        <h2 class="header-title portfolio-header__title">
                             RECENT WORKS
-                        </h3>
+                        </h2>
                         <p>
                             It has survived not only five centuries, but also the leap scrambled it to make a type.
                         </p>
@@ -377,9 +377,9 @@
             <section class="study">
                 <div class="row">
                     <div class="columns study-header">
-                        <h3 class="study-header__title">
+                        <h2 class="study-header__title">
                             CASE STUDY
-                        </h3>
+                        </h2>
                         <p>
                             A brief story about how this process works, keep an eye till the end.
                         </p>
@@ -555,12 +555,12 @@
                 </div>
             </section>
             <!-- /stats -->
-            <section class="pricing">
+            <section id="pricing" class="pricing">
                 <div class="row pricing__header">
                     <div class="columns">
-                        <h3 class="pricing__header-title">
+                        <h2 class="pricing__header-title">
                             OUR PRICING
-                        </h3>
+                        </h2>
                         <p class="pricing__header-desc">
                             A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.
                         </p>
@@ -571,12 +571,34 @@
                     </div>
                 </div>
                 <div class="row pricing__footer">
-                    <div class="columns medium-4 pricing__info">
-                        <div class="pricing-info__header">
-                            <h4 class="pricing-info__header-title">STARTER</h4>
+                    <div class="columns medium-12 large-4 pricing-info">
+                        <div class="info-header">
+                            <h4 class="info-header__title">STARTER</h4>
+                            <div class="price-info">
+                                <p class="price-info__price">$19</p>
+                                <p class="pricing-info__desc">per month</p>
+                            </div>
                         </div>
-                        <div class="pricing-info__footer">
-                            <p class="printing-info__footer-desc">
+                        <div class="info-footer">
+                            <p class="info-footer__desc">
+                                Competition Analysis Methods
+                                All Ranked URLs <br />
+                                International Support System
+                                Social Media Tracking
+                            </p>
+                            <a class="button price__button--color--jet">CHOOSE PLAN</a>
+                        </div>
+                    </div>
+                    <div class="columns medium-12 large-4 pricing-info">
+                        <div class="info-header info-header--color--primary">
+                            <h4 class="info-header__title">STARTER</h4>
+                            <div class="price-info">
+                                <p class="price-info__price price-info__price--color--primary">$19</p>
+                                <p class="pricing-info__desc price-info__desc--color--primary">per month</p>
+                            </div>
+                        </div>
+                        <div class="info-footer">
+                            <p class="info-footer__desc">
                                 Competition Analysis Methods
                                 All Ranked URLs <br />
                                 International Support System
@@ -585,108 +607,252 @@
                             <a class="button">CHOOSE PLAN</a>
                         </div>
                     </div>
-                    <div class="columns medium-4 pricing__info">
-                        <div class="pricing-info__header">
-                            <h4 class="pricing-info__header-title">STARTER</h4>
+                    <div class="columns medium-12 large-4 pricing-info">
+                        <div class="info-header">
+                            <h4 class="info-header__title">STARTER</h4>
+                            <div class="price-info">
+                                <p class="price-info__price">$19</p>
+                                <p class="pricing-info__desc">per month</p>
+                            </div>
                         </div>
-                        <div class="pricing-info__footer">
-                            <p class="printing-info__footer-desc">
+                        <div class="info-footer">
+                            <p class="info-footer__desc">
                                 Competition Analysis Methods
                                 All Ranked URLs <br />
                                 International Support System
                                 Social Media Tracking
                             </p>
-                            <a class="button">CHOOSE PLAN</a>
-                        </div>
-                    </div>
-                    <div class="columns medium-4 pricing__info">
-                        <div class="pricing-info__header">
-                            <h4 class="pricing-info__header-title">STARTER</h4>
-                        </div>
-                        <div class="pricing-info__footer">
-                            <p class="printing-info__footer-desc">
-                                Competition Analysis Methods
-                                All Ranked URLs <br />
-                                International Support System
-                                Social Media Tracking
-                            </p>
-                            <a class="button">CHOOSE PLAN</a>
+                            <a class="button price__button--color--jet">CHOOSE PLAN</a>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- /pricing -->
-        </main>
-        <!-- /main.row -->
-        <footer <div="" class="row">
-            <div class="columns">
-                <div class="ba-footer__inner ba-content">
-                    <div class="row">
-                        <div class="ba-widget columns medium-4">
-                            <h4 class="ba-widget__title">
-                                About BINO
-                            </h4>
+            <section id="team" class="team">
+            <div class="row team__header">
+                <div class="columns">
+                    <h2 class="team__header-title">
+                        OUR PRICING
+                    </h2>
+                    <p class="team__header-desc">
+                        Meet the craziest team. Share your thoughts with them.
+                    </p>
+                    <i aria-hidden="true" class="fa fa-circle">
+                        <span class="fa-circle__lines fa-circle__lines-color-gray">
+                        </span>
+                    </i>
+                </div>
+            </div>
+            <div class="team__footer hide-for-large-up">
+            <div class="row marg-bottom">
+                    <div class="columns small-2 marg-bottom">
+                    </div>
+                    <div class="columns small-4 text-center">
+                    <div class="team-member">
+                    </div>
+                        <h4 class="team-info__title">Kazi Erfan</h4>
+                         <p class="team-info__desc">UI/UX Desiger</p>
+                    </div>
+                    <div class="columns small-4 text-center">
+                    <div class="team-member">
+                    </div>
+                        <h4 class="team-info__title">Kazi Erfan</h4>
+                         <p class="team-info__desc">UI/UX Desiger</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns small-2 marg-bottom">
+                    </div>
+                    <div class="columns small-4 text-center">
+                    <div class="team-member">
+                    </div>
+                        <h4 class="team-info__title">Kazi Erfan</h4>
+                         <p class="team-info__desc">UI/UX Desiger</p>
+                    </div>
+                    <div class="columns small-4 text-center">
+                    <div class="team-member">
+                    </div>
+                        <h4 class="team-info__title">Kazi Erfan</h4>
+                         <p class="team-info__desc">UI/UX Desiger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member__block team-member__first  hide-for-small hide-for-medium">
+                <div class="team-member">
+                </div>
+                <div class="team-member__info">
+                     <h4 class="team-info__title">Kazi Erfan</h4>
+                     <p class="team-info__desc">UI/UX Desiger</p>
+                 </div>
+            </div>
+            <div class="team-member__block team-member__second  hide-for-small hide-for-medium">
+                <div class="team-member">
+                </div>
+                <div class="team-member__info">
+                     <h4 class="team-info__title">Kazi Erfan</h4>
+                     <p class="team-info__desc">UI/UX Desiger</p>
+                 </div>
+            </div>
+            <div class="team-member__block team-member__third  hide-for-small hide-for-medium">
+                <div class="team-member">
+                </div>
+                <div class="team-member__info">
+                     <h4 class="team-info__title">Kazi Erfan</h4>
+                     <p class="team-info__desc">UI/UX Desiger</p>
+                 </div>
+            </div>
+            <div class="team-member__block team-member__fourth hide-for-small hide-for-medium">
+                <div class="team-member">
+                </div>
+                <div class="team-member__info">
+                     <h4 class="team-info__title">Kazi Erfan</h4>
+                     <p class="team-info__desc">UI/UX Desiger</p>
+                 </div>
+            </div>
+            </section>
+            <!-- /team -->
+            <section id="blog" class="blog">
+            <div class="row blog__header">
+                <div class="columns">
+                    <h2 class="blog__header-title">
+                        OUR BLOG
+                    </h2>
+                    <p class="blog__header-desc">
+                      Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio.
+                    </p>
+                    <i aria-hidden="true" class="fa fa-circle">
+                        <span class="fa-circle__lines fa-circle__lines-color-gray">
+                        </span>
+                    </i>
+                </div>
+            </div>
+            <div class="blog__footer">
+                <div class="row blog-item">
+                    <div class="columns small-12 blog-columns blog-columns__first">
+                        <div class="blog-columns__content">
+                            <span class="blog-item__path">art / t-shirt</span>
+                            <h4 class="blog-item__title">T-SHIRT DESIGN</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. Id mei vitae denique, in eam commodo veritus disputando.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.
                             </p>
-                            <p>
-                                Pro et erant delicata, eu vim essent imperdiet accommodare, dictas deseruisse ius an. Solet everti definitionem id ius, sonet oporteat cu vim.
-                            </p>
+                            <a  class="blog-item__url" href="#"> Read More &rsaquo;&rsaquo;</a>
                         </div>
-                        <div class="ba-widget columns medium-4">
-                            <h4 class="ba-widget__title">
-                                Twitter widget
-                            </h4>
-                            <p class="ba-tweet">
-                                <a href="#">
-                                    @pixelmater
-                                </a>
-                                What an awesome design with great functionality :)
-                                <span class="ba-tweet__time">
-                                    about 1 hour ago
-                                </span>
-                            </p>
-                            <p class="ba-tweet">
-                                <a href="#">
-                                    @designdude
-                                </a>
-                                What an awesome design with great functionality :)
-                                <span class="ba-tweet__time">
-                                    about 2 hour ago
-                                </span>
-                            </p>
-                            <p class="ba-tweet__follow">
-                                Follow
-                                <a href="#">
-                                    @bestpsdfreebies
-                                </a>
-                            </p>
-                        </div>
-                        <div class="ba-widget columns medium-4">
-                            <h4 class="ba-widget__title">
-                                Contact us
-                            </h4>
+                    </div>
+                    <div class="columns small-12 blog-columns blog-columns__second">
+                        <div class="blog-columns__content">
+                            <span class="blog-item__path">art / t-shirt</span>
+                            <h4 class="blog-item__title">T-SHIRT DESIGN</h4>
                             <p>
-                                Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te, per at tritani aperiri.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.
                             </p>
-                            <p>
-                                <a href="mailto:information@jetro.com">
-                                    information@jetro.com
-                                </a>
-                                <br>
-                                    <a href="callto:1.222.333.4444">
-                                        1.222.333.4444
-                                    </a>
-                                </br>
-                            </p>
-                            <div class="jt-footer-socials">
-                            </div>
+                            <a  class="blog-item__url" href="#"> Read More &rsaquo;&rsaquo;</a>
                         </div>
                     </div>
                 </div>
-                <!-- .row
+            </div>
+            </section>
+            <!-- /blog -->
+            <section id="contact" class="contact">
+                <div class="row contact__header">
+                    <div class="columns">
+                        <h2 class="contact__header-title">
+                            KEEP IN TOUCH
+                        </h2>
+                        <p class="contact__header-desc">
+                            Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.
+                        </p>
+                        <i aria-hidden="true" class="fa fa-circle">
+                            <span class="fa-circle__lines fa-circle__lines-color-gray">
+                            </span>
+                        </i>
+                    </div>
                 </div>
-                <!-- .ba-footer__inner -->
+                <div class="row contact__footer">
+                    <div class="columns small-12 medium-5">
+                        <div class="contact-info">
+                            <div class="our-adress">
+                                <h4 class="our-adress__title">
+                                   OUR ADDRESS
+                                </h4>
+                                <p class="our-adress__desc">
+                                   House #13, Streat road, Sydney
+                                    2310 Australia
+                                </p>
+                            </div>
+                            <div class="our-call">
+                                <h4 class="our-call__title">
+                                   CALL US
+                                </h4>
+                                <p class="our-call__desc">
+                                    + 880 168 109 1425 <br />
+                                    + 0216809142
+                                </p>
+                            </div>
+                            <div class="our-email">
+                                <h4 class="our-email__title">
+                                    EMAIL US
+                                </h4>
+                                <p class="our-email__desc">
+                                    contactus@email.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns small-12 medium-7">
+                        <div class="contact-message">
+                            <form>
+                                <input type="text" name="name" placeholder="Name">
+                                <input type="text" name="email" placeholder="Email">
+                                <input type="text" name="subject" placeholder="Subject">
+                                <textarea name="Text1" cols="40" rows="5" placeholder="Message"></textarea>
+                                <input type="submit" class="button" name="submit" value="SEND MESSAGE">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /touch -->
+            <section class="promo">
+                <div class="row text-center">
+                    <div class="columns small-12">
+                        <h2 class="promo__title">
+                            Let's Get Started Now. It's FREE!
+                        </h2>
+                        <p class="promo__desc">
+                            30 day free trial. Free plan allows up to 2 projects. Pay if you need more. Cancel anytime. No catches.
+                        </p>
+                        <a class="promo__trial button" href="#">START FREE TRIAL</a>
+                    </div>
+                </div>
+            </section>
+            <!-- /promo -->
+        </main>
+        <!-- /main.row -->
+        <footer class="footer">
+            <div class="row">
+                <div class="columns small-12">
+                    <ul class="footer__icon inline-list">
+                        <li><a href="#"><i class="fa fa-google-plus footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook footer-icon__item" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-tumblr footer-icon__item" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <span class="footer-copyright">Kazi Erfan © All Rights Reserved</span>
+                </div>
+            </div>
+            <div class="footer__go-up">
+                <a href="#header">
+                    <svg
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="61px" height="61px">
+                        <image  x="0px" y="0px" width="61px" height="61px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </a>
             </div>
         </footer>
         <script src="js/vendor.js">
