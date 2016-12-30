@@ -1,5 +1,6 @@
 /*============    Настройки    ==========*/
 @import "../scss/settings";
+@import "../scss/mixin";
 
 /*============    Framework    ==========*/
 @import "../../bower_components/foundation/scss/foundation";
@@ -12,6 +13,13 @@
 //@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200)
 
 /*============    HELPER CLASS    ===========*/
+::-webkit-input-placeholder {color:#ccc;}
+::-moz-placeholder          {color:#ccc;}/* Firefox 19+ */
+:-moz-placeholder           {color:#ccc;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#ccc;}
+.marg-bottom{
+  margin-bottom: 100px;
+}
 .hidden{ visibility: hidden;
 }
 .column+.column:last-child, .column+.columns:last-child, .columns+.column:last-child, .columns+.columns:last-child{
@@ -151,14 +159,8 @@
 }
 .design__header:hover .square,.free-supp__header:hover .square,.code__header:hover .square,.creative__header:hover .square{
   border-color: $primary-color;
-  -moz-transform: rotate(45deg); /* Для Firefox */
-  -ms-transform: rotate(45deg); /* Для IE */
-  -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */
-  -o-transform: rotate(45deg); /* Для Opera */
-  transform: rotate(45deg);
-  -moz-transition: all 0.5s 0.1s ease-in;
-  -o-transition: all 0.5s 0.1s ease-in;
-  -webkit-transition: all 0.5s 0.1s ease-in;
+  @include rotate(45deg);
+  @include transition(0.5s, 0.1s, ease-in);
  }
 .design__descr,.free-supp__descr,.code__descr,.creative__descr{
   font-size: 12px;
@@ -201,7 +203,7 @@
   position: relative;
   color: $primary-color;
   padding-right: 5%;
-  }
+}
 
   .services-content__sub-title{
   &::after{
@@ -258,11 +260,7 @@
       top: 3px;
       background-color: $jet;
       z-index: 20;
-      -moz-transform: rotate(15deg); /* Для Firefox */
-      -ms-transform: rotate(15deg); /* Для IE */
-      -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
-      -o-transform: rotate(15deg); /* Для Opera */
-      transform: rotate(15deg);
+      @include rotate(15deg);
    }
 }
 .portfolio-menu .portfolio-menu_item:first-of-type::after{ content: none;
@@ -421,27 +419,359 @@
 	padding-bottom: 10px;
 }
 .pricing__footer{
-	text-align: center;
+  text-align: center;
 }
-.pricing-info__header{
-	min-height: 205px;
-	padding-top: 45px;
-	background-color: #999999;
+.info-header{
+  position: relative;
+  z-index: 0;
+  height: 205px;
+  padding-top: 45px;
+  background-color: #999999;
 }
-.pricing-info__header-title{
-	color: #FFF;
+.info-header__title{
+  color: #FFF;
 }
-.pricing-info__footer{
-	min-height: 405px;
-	padding: 125px 80px 40px 80px;
-	background-color: #F4F5F9;
+.info-footer{
+  min-height: 405px;
+  padding: 125px 80px 40px 80px;
+  background-color: #F4F5F9;
 }
-.printing-info__footer-desc{
-	line-height: 3;
+.info-footer__desc{
+  line-height: 3;
 }
-/*============    ПОДВАЛ    ===========*/
+.price-info{
+  padding-top: 40px;
+  position: relative;
+  margin: auto;
+  top: 40px;
+  width: 155px;
+  height: 155px;
+  background:  white;
+  @include border-radius(80px);
+  }
+.price-info::before{
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: -12px;
+  background-color: white;
+  opacity: 0.4;
+  width: 180px;
+  height: 180px;
+  @include border-radius(100px);
+  z-index: -5;
+}
+.price-info__price{
+  height: 30px;
+  font-weight: bold;
+  font-size: 39px;
+  color: #535353;
+}
+.pricing-info__desc{
+   font-weight: bold;
+   color: #535353;
+   font-size: 13px;
+}
+.price__button--color--jet{
+  background-color: $jet;
+}
+.info-header--color--primary,{
+  background-color: $primary-color;
+}
+.price-info__desc--color--primary,.price-info__price--color--primary{
+  color: $primary-color;
+}
+/*===========    SECTION TEAM    ===========*/
+.team{
+  position: relative;
+  z-index: 1;
+  min-height: 745px;
+  //background-image: url(../images/team.jpg);
+  background: url(../images/Curve.png)  no-repeat, url(../images/team.jpg) no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat; /* Отменяем повторение фона */
+}
+.team::before{
+  z-index: -3;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 745px;
+  opacity: 0.7;
+  background-color: #3A3939;
+}
+.team__header{
+  padding-top: 120px;
+  z-index: 10;
+  text-align: center;
+}
+.team__header-title{
+  color: #FFF;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.team-member{
+    padding-top: 40px;
+    position: relative;
+    margin: auto;
+    width: 57px;
+    height: 57px;
+    background: #fff;
+    border: 3px solid $primary-color;
+    @include border-radius(30px);
+    background-image: url(../images/team1.jpg) no-repeat;
+    background-position: 40% 0%;
+    &:hover{
+      @include box-shadow(6px, 16px, 3px, black);
+    }
+}
+.team-member::before{
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: 20;
+      border-radius: 30px;
+}
+.team-member:hover:before {
+      background-color: $primary-color;
+      opacity: 0.3;
+}
+.team-member:hover + .team-member__info{
+visibility: visible;
+}
+.team-member__block{
+  position: absolute;
+}
+.team-member__first{
+    left: 23%;
+    bottom: 30%;
+}
+.team-member__second{
+    left: 34%;
+    bottom: 35%;
+}
+.team-member__third{
+    left: 46%;
+    bottom: 37%;
+}
+.team-member__fourth{
+    left: 58%;
+    bottom: 35%;
+}
+.team-member__info{
+  position: relative;
+  padding-top: 40px;
+  visibility: hidden;
+  text-align: center;
+  width: 160px;
+  height: 70px;
+  &::before{
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 35px;
+    background-color: #FFF;
 
-
+  }
+}
+.team-info__title{
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 0;
+}
+.team-info__desc{
+  margin-bottom: 0;
+}
+/*===========    SECTION BLOG    ===========*/
+.blog{
+  background-color: #F4F5F9;
+  padding-top: 120px;
+  min-height: 960px;
+}
+.blog__header{
+  text-align: center;
+}
+.blog__header-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+.blog-item{
+  color: #FFF;
+  background-color: $primary-color;
+}
+.blog-item__title{
+  position: relative;
+  padding: 25px 0 40px 0;
+  &:before{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: #FFF;
+    bottom: 25px;
+  }
+}
+.blog-item__title,.blog-item__url,.blog-item__url:hover{
+  color: #FFF;
+}
+.blog-item__path,.blog-item__url{
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.blog-columns{
+  padding: 0;
+  background-color: $primary-color;
+}
+.blog-columns__first{
+  position: relative;
+  padding-right: 56%;
+  padding-left: 6%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-image: url(../images/car.jpg);
+  background-position: 100% 50%;
+  &:before{
+    content: '';
+    top: 43%;
+    position: absolute;
+    left: 50%;
+    border: 35px solid transparent;
+    border-left: 25px solid #E74C3C;
+  }
+}
+.blog-columns__second{
+  padding-left: 56%;
+  padding-right: 6%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-image: url(../images/cofe.jpg);
+  background-position: 0 50%;
+    &:before{
+    content: '';
+    top: 43%;
+    position: absolute;
+    right: 50%;
+    border: 35px solid transparent;
+    border-right: 25px solid #E74C3C;
+  }
+}
+/*===========    SECTION  TOUCH    ===========*/
+.contact{
+  background-color: #F4F5F9;
+  padding-top: 120px;
+  min-height: 960px;
+}
+.contact__header{
+  text-align: center;
+}
+.contact__header-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+.contact__footer{
+  padding-top: 50px;
+}
+.contact-info{
+  background-color: white;
+  padding-bottom: 50px;
+  @include box-shadow(3px, 5px, 1px, rgba(0,0,0,0.1));
+}
+.contact-message{
+  padding: 14.5% 14% 0;
+  padding-bottom: 50px;
+  background-color: white;
+  @include box-shadow(3px, 5px, 1px, rgba(0,0,0,0.1));
+  }
+.our-adress,.our-call,.our-email{
+  padding: 11% 18% 0;
+}
+.our-adress__title,.our-call__title,.our-email__title{
+  color: $primary-color;
+  font-weight: bold;
+}
+.our-call__desc,.our-adress__desc,.our-email__desc{
+  font-size: 18px;
+}
+.contact-message input[type=text],.contact-message textarea{
+  resize: none;
+  border-color: white;
+  border-bottom-color: #ccc;
+  box-shadow: none;
+}
+.contact-message input[type=submit]{
+  margin-top: 30px;
+  @include box-shadow(3px, 5px, 1px, rgba(0,0,0,0.1));
+}
+/*===========    SECTION PROMO    ===========*/
+.promo{
+  position: relative;
+  min-height: 480px;
+  background-image: url(../images/promo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    position: absolute;
+    background-color: #000;
+  }
+}
+.promo__title{
+  color: #FFF;
+  margin-top: 140px;
+}
+.promo__desc{
+  color: #FFF;
+  font-size: 18px;
+}
+.promo__trial{
+  margin-top: 50px;
+}
+/*===========    FOOTER    ===========*/
+.footer{
+  position: relative;
+  min-height: 90px;
+  background-color: #202020;
+}
+.footer__icon{
+  display: inline-block;
+    height: 90px;
+    padding-top: 37px;
+    margin: 0;
+    font-size: 0;
+    padding-top: 30px;
+}
+.footer-icon__item{
+  width: 13px;
+  padding-top: 50%;
+  font-size: 21px;
+  color: gray;
+  &:hover{
+    color: $primary-color;
+  }
+}
+.footer-copyright{
+  display: inline-block;
+  float: right;
+  padding-top: 37px;
+  font-size: 14px;
+}
+.footer__go-up{
+  position: absolute;
+  top: -30px;
+  right: 5%;
+  @include transition(0.5s, 0.1s, ease-in);
+}
 /*============      АДАПТИВ    ===========*/
 
 // Small screens
@@ -506,15 +836,33 @@
   .stats__row{
   	padding-top: 60px;
   }
+  .blog-columns__second,.blog-columns__first{
+    background-size: 0;
+    background-size: cover;
+    &:before{
+      content: none;
+    }
+  }
+  .blog-columns__content{
+    padding: 0 5px;
+    background-color: $primary-color;
+  }
+ .contact-message form {
+    text-align: center;
+  }
 }
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
 // Medium screens
 @media only screen and (min-width: 40.063em) {
-	.stats__medium{
+	.stats__medium,.medium-2-5{
 	width: 20%;
 	}
+  .info-footer {
+    min-height: 320px;
+    padding-top: 104px;
+  }
 }
 
 // Small - Medium screens
@@ -549,25 +897,31 @@
     margin-left: 1rem;
   }
   .portfolio-menu .portfolio-menu_item::after {
+
     left: -0.5rem;
   }
   .portfolio-element__info{
     left: 25px;
     top: 70%;
   }
-
   .portfolio-element__title{
     font-size: 1rem;
   }
-
   .study__footer-desc{
   padding: 0 15px 50px ;
   }
   .tabs-content .study__content {
       padding-top: 60px;
   }
+  .blog-item__path,.blog-item__url{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .blog-item__title {
+    padding: 0px 0 30px;
 }
-
+}
 /* min-width 641px, medium screens */
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {

@@ -1,6 +1,4 @@
 /bower_components/*
 /node_modules
-/*tz-html-pictures.zip
-npm-debug.log
 /dist
 index.psd
