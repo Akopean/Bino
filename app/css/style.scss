@@ -544,7 +544,7 @@
 visibility: visible;
 }
 .team-member__block{
-  position: absolute;
+  margin: 20px auto;
 }
 .team-member__first{
     left: 23%;
@@ -567,6 +567,7 @@ visibility: visible;
   padding-top: 40px;
   visibility: hidden;
   text-align: center;
+  margin: 0 auto;
   width: 160px;
   height: 70px;
   &::before{
@@ -587,6 +588,9 @@ visibility: visible;
 }
 .team-info__desc{
   margin-bottom: 0;
+}
+.team__footer{
+  margin: 25px auto;
 }
 /*===========    SECTION BLOG    ===========*/
 .blog{
@@ -934,6 +938,9 @@ visibility: visible;
   }
   .services__icon-web,.services__icon-print,.services__icon-photo{
   left: 93%;
+  }
+  .study__info {
+    min-width: 600px;
   }
 }
 
