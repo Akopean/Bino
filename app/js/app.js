@@ -7,9 +7,9 @@ $('.portfolio-footer__element').hover(function() {
 $('.team-member__block>.team-member').hover(function(){
 	$(this).stop(true);
 	$(this).animate({
-		width: 80,
-		height: 80,
-		borderRadius: 70,
+		width: 58,
+		height: 58,
+		borderRadius: 31,
 		boxShadow : "0 6px 16px 3px black",
 	},500);
 }, function(){
